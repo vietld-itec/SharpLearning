@@ -82,6 +82,7 @@ namespace SharpLearning.Neural.Test.Models
             net.Add(new SquaredErrorRegressionLayer());
 
             var learner = new RegressionNeuralNetLearner(net, new AccuracyLoss());
+            
             var sut = learner.Learn(observations, targets);
 
             // save model.

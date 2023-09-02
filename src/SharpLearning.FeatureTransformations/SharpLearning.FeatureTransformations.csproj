@@ -1,29 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\_workspace\SharpLearning\Backup\src\SharpLearning.FeatureTransformations\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>SharpLearning.FeatureTransformations</PackageId>
     <Description>Provides matrix and CsvRow transforms.</Description>
     <PackageTags>normalization minmax onehot missingvalues</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>..\..\Build\Release\netstandard2.0\SharpLearning.FeatureTransformations.xml</DocumentationFile>
     <OutputPath>..\..\Build\Release\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\..\Build\Debug\</OutputPath>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SharpLearning.Containers\SharpLearning.Containers.csproj" />
     <ProjectReference Include="..\SharpLearning.InputOutput\SharpLearning.InputOutput.csproj" />
   </ItemGroup>
-
 </Project>

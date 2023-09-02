@@ -1,35 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\_workspace\SharpLearning\Backup\src\SharpLearning.Neural\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>SharpLearning.Neural</PackageId>
     <Description>Provides learning algorithms and models for neural net regression and classification.</Description>
     <PackageTags>neural network convolutional deep learning machinelearning classification regression machine</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>..\..\Build\Release\netstandard2.0\SharpLearning.Neural.xml</DocumentationFile>
     <OutputPath>..\..\Build\Release\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\..\Build\Debug\</OutputPath>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="MathNet.Numerics" Version="4.8.1" />
     <PackageReference Include="MathNet.Numerics.MKL.Win" Version="2.3.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SharpLearning.Common.Interfaces\SharpLearning.Common.Interfaces.csproj" />
     <ProjectReference Include="..\SharpLearning.Containers\SharpLearning.Containers.csproj" />
     <ProjectReference Include="..\SharpLearning.InputOutput\SharpLearning.InputOutput.csproj" />
   </ItemGroup>
-
 </Project>
